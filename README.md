@@ -1,15 +1,15 @@
-# To-Do-Agent: End-to-End Data Pipeline Demo
+## End-to-End Data Pipeline
 
 Bu proje, Apache Kafka, Apache Spark ve Apache Airflow kullanılarak uçtan uca (end-to-end) veri üretimi, işlenmesi ve otomasyonu örneklemek için hazırlanmıştır.
 
 ## Proje Amacı
-Gerçek zamanlı ve toplu veri işleme süreçlerini, modern veri mühendisliği araçlarıyla (Kafka, Spark, Airflow) Docker üzerinde deneyimlemek ve öğrenmek.
+Gerçek zamanlı vliği araçlarıyla (Kafka, Spark, Airflow) Docker üzerinde dee toplu veri işleme süreçlerini, modern veri mühendisneyimlemek ve öğrenmek.
 
 ## Mimarideki Bileşenler
 - **Kafka:** Gerçek zamanlı veri akışı ve saklama (sipariş verileri).
 - **Spark:** Kafka'dan verileri okuyup toplu (batch) olarak analiz ve raporlama.
 - **Airflow:** Spark işlerini otomatik ve zamanlanmış şekilde tetikleme.
-- **Postgres:** (İsteğe bağlı) Kalıcı veri saklama.
+- **Postgres:** (İsteğe bağlı) Kalıcı veri saklama.Bu projede kullanılmıyor.
 - **Producer (Python):** Kafka'ya rastgele sipariş verisi üreten Python scripti.
 
 ## Nasıl Çalışır?
@@ -29,12 +29,9 @@ Gerçek zamanlı ve toplu veri işleme süreçlerini, modern veri mühendisliği
    ```
    python kafka_producer/producer.py
    ```
-4. Airflow arayüzüne [http://localhost:8080](http://localhost:8080) adresinden erişin.
+4. Airflow arayüzüne erişin.
 5. `daily_report_dag` isimli DAG'ı elle veya otomatik olarak tetikleyin.
 
-## Dikkat Edilmesi Gerekenler
-- `.env` dosyanızı asla paylaşmayın! Sadece `.env.example` dosyasını paylaşın.
-- Tüm log ve veri klasörleri `.gitignore` ile korunmaktadır.
 
 ## Kullanılan Teknolojiler
 - Apache Kafka
@@ -44,5 +41,5 @@ Gerçek zamanlı ve toplu veri işleme süreçlerini, modern veri mühendisliği
 - Python (kafka-python, pyspark)
 
 ---
-
-Bu proje, veri mühendisliği süreçlerini öğrenmek ve denemek isteyenler için hazırlanmış bir örnektir. Katkıda bulunmak veya soru sormak için issue açabilirsiniz.
+## UYARI
+Bu proje, veri mühendisliği süreçlerini öğrenmek ve denemek isteyenler için hazırlanmış bir örnektir.Ticari bir amaç için kullanılamaz.
