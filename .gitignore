@@ -1,0 +1,15 @@
+# .gitignore
+.env
+.env.*
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+airflow-logs/
+pgdata/
+.envrc
+.DS_Store
+.idea/
+.vscode/
